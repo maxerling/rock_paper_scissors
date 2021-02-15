@@ -1,0 +1,44 @@
+.button {
+    border: 1px solid;
+    margin: 10px;
+    text-align: center;
+    display: inline;
+    width: auto;
+    height: auto;
+    padding:3px
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.scoretable {
+    padding:0px;
+    text-align: center;
+
+}
+
+
+
+.scoretable h2 {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.buttons {
+    text-align: center;
+    padding:50px;
+}
+
+.output {
+    border: 1px solid;
+    height:40%;
+    width:40%;
+    margin: auto;
+    padding:10px;
+    
+
+}
+
+

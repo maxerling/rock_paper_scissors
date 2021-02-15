@@ -1,90 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Rock,Paper,Scissors</title>
-  <style>
-    
-  </style>
+    <meta charset="utf-8">
+    <title>Rock,Paper,Scissors</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>
+    <main>
+        <div class="scoretable">
+            <h1>Round </h1>
+            <h1 class="round">0</h1>
+            <h2>P1:</h2>
+            <h2 class="p1">0</h2>
+            <h2>-</h2>
+            <h2>C:</h2>
+            <h2 class="computer">0</h2>
+        </div>
+        <div class="buttons">
+            <div class="button" value="rock">Rock</div>
+            <div class="button" value="paper">Paper</div>
+            <div class="button" value="scissor">Scissor</div>
+        </div>
+    </main>
 
-<script>
-
-game();
-
-function playRound(playerSelection,computerPlay) {
-    let p1 = "Player1";
-    let p2 = "Player2";
-    let r = "rock";
-    let p = "paper";
-    let s = "scissor";
-    console.log(p1 + " choose " + playerSelection);
-    console.log(p2 + " choose " + computerPlay);
+    <div class="output">
+    </div>
     
-    if (playerSelection == computerPlay) {
-        console.log("It's a draw!")
-    } else if ((playerSelection == r) && (computerPlay == s)) {
-        console.log(p1 + " won, " + p2 + " lost")
-        return 0;
-    } else if ((playerSelection == r) && (computerPlay == p)) {
-        console.log(p2 + " won, " + p2 + " lost")
-        return 1;
-    } else if ((playerSelection == s) && (computerPlay == p)) {
-        console.log(p1 + " won, " + p2 + " lost")
-        return 0;
-    } else if ((playerSelection == s) && (computerPlay == r)) {
-        console.log(p2 + " won, " + p2 + " lost")
-        return 1;
-    } else if ((playerSelection == p) && (computerPlay == r)) {
-        console.log(p1 + " won, " + p2 + " lost")
-        return 0;
-    } else if ((playerSelection == p) && (computerPlay == s)) {
-        console.log(p2 + " won, " + p2 + " lost")
-        return 1;
-    } else {
-        console.log("ERROR! couldn't complete")
-    }
-}
-
-function computerPlay() {
-    let value = getRandomInt(3);
-
-    if (value == 0) {
-        return "Rock".toLowerCase(); 
-    } else if (value == 1) {
-        return "Paper".toLowerCase();
-    } else if (value = 2) {
-        return "Scissor".toLowerCase();
-    }
-}
-
-function game() {
-    let p1Score = 0;
-    let p2Score = 0;
-    for (let i = 0; i < 5; i++) {
-        input = prompt("Rock, paper or scissor?").toLowerCase();
-        computerInput = computerPlay();
-       let result = playRound(input,computerInput);
-
-       if (result == 0) {
-           p1Score++;
-       } else if (result == 1) {
-           p2Score++;
-       }
-
-       
-    }
-
-    console.log("Player1 score: " + p1Score);
-    console.log("Player2 score: " + p2Score);
-
-
-}
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
